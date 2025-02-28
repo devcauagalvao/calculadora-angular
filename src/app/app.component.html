@@ -1,0 +1,13 @@
+<div class="calculator-container">
+  <h2>Calculadora Angular</h2>
+  <mat-grid-list cols="4" rowHeight="80px">
+    <mat-grid-tile colspan="4">
+      <input matInput [(ngModel)]="input" readonly>
+    </mat-grid-tile>
+    <ng-container *ngFor="let key of ['7','8','9','/','4','5','6','*','1','2','3','-','0','.','=','+','Calcular']">
+      <mat-grid-tile>
+        <button mat-raised-button color="primary" (click)="pressKey(key)">{{ key }}</button>
+      </mat-grid-tile>
+    </ng-container>
+  </mat-grid-list>
+</div>
