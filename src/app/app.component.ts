@@ -18,11 +18,11 @@ export class AppComponent {
   pressKey(value: string) {
     if (value === '=') {
       try {
-        this.input = new Function('return ' + this.input)(); // Alternativa mais segura ao eval()
+        this.input = new Function('return ' + this.input)(); // Executa a expressão matematicamente segura
       } catch {
         this.input = 'Erro';
       }
-    } else if (value === 'Calcular') {
+    } else if (value === 'Limpar') {
       this.input = '';
     } else {
       this.input += value;
